@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 10%;
+    width: 100%;
+    opacity: 1;
+    z-index: -1;
+}
+
+.navbar .ulOfNavbar{
+    display: flex;
+    flex-direction: row;
+    padding: 18px;
+
+}
+
+.navbar ul li{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    list-style: none;
+}
+.navbar ul li a{
+    padding: 10px 30px;
+    text-decoration: none;
+    color: white;
+    /* border-radius: 100%; */
+}
+.navbar ul li a:hover{
+    color: rgb(147, 144, 144);
+}
+
+.home{
+    /* background-color: yellow; */
+    width: 75%;
+    margin: 20px auto;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+.home form{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+}
+.home::before{
+    content: "";
+    background: url("https://t4.ftcdn.net/jpg/01/84/63/09/360_F_184630923_GF9S3Yz4XydO3ZDjBBslhq6Q5pdLeIKk.jpg") no-repeat center center/cover;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.94;
+}
+
+.home form input::placeholder{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+.home form textarea::placeholder{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+
+.home form input,textarea{
+    outline: none;
+    padding: 12px;
+    margin: 13px 0px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn{
+    padding: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}

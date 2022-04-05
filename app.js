@@ -2,6 +2,7 @@ const express=require('express');
 const app = express();
 const port=80;
 const path=require('path')
+app.use(express.urlencoded());
 
 //set static files in node.js
 app.use('/static',express.static('static'))
@@ -13,12 +14,13 @@ app.set('view engine','pug')
 app.set('views',path.join(__dirname,'views'));
 
 // Our pug demo endpoint
-app.get('/demo',(req,res)=>{
-    res.status(200).render('demo',{title:'Title',message:'This is a message'})
+app.get('/',(req,res)=>{
+    res.status(200).render('home')
 })
 
-app.get('/',(req,res)=>{
-    res.send('My name is sayali')
+app.post('/',(req,res)=>{
+    console.log(req.body)
+    res.status(200).render('home')
 })
 
 app.listen(port,()=>{
